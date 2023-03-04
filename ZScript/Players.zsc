@@ -1,0 +1,25 @@
+class StEJPlayer : DoomPlayer
+{
+	Default
+	{
+		+NOBLOOD
+	}
+}
+
+class SparkPlayer : StEJPlayer
+{
+	Default
+	{
+		Player.DisplayName "Spark";
+		Player.Portrait "SPRKFACE";
+	}
+}
+
+class FarkPlayer : StEJPlayer
+{
+	Default
+	{
+		Player.DisplayName "Fark";
+		Player.Portrait "FARKFACE";
+	}
+}

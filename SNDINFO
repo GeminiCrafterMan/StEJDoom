@@ -1,0 +1,34 @@
+// =========================================================================================
+// StEJDOOM by Gemini0 & Mengo - SNDINFO - Generic things, mostly menu
+// =========================================================================================
+// Menu sounds
+menu/cursor			"Sounds/Menus/Bip_3.wav"				// move cursor up/down
+menu/change			"Sounds/Menus/Bip_3.wav"				// select new value for option
+menu/activate		"Sounds/Menus/select.wav"				// activate a new menu	(combination of Chip1 and Dash01)
+menu/choose			"Sounds/Menus/select.wav"				// choose a menu item
+menu/backup			"Sounds/Menus/Cute03.wav"				// backup to previous menu
+menu/dismiss		"Sounds/Menus/Cute03.wav"				// dismiss a prompt message
+menu/prompt			"Sounds/Menus/Cute16_01.wav"			// activate a prompt "menu" (what)
+menu/invalid		"Sounds/Menus/Cute16Shot_01.wav"		// menu not available
+menu/clear			"Sounds/Menus/Cute03.wav"				// close top menu
+//menu/pause		"Sounds/Menus/pause.ogg"				// pause game
+menu/text			"Sounds/Menus/Menu_Bip_01.wav"			// text beep
+
+misc/chat			"Sounds/Menus/Menu_Bip_01.wav"			// Doom 2 chat sound
+misc/chat2			"Sounds/Menus/Menu_Bip_01.wav"			// Chat sound for everything else
+
+intermission/tick		"Sounds/Menus/Tally.wav"			// End-of-level tally tick
+intermission/nextstage	"Sounds/CollectAdjusted.wav"		// End-of-level tally explosion
+
+$limit	menu/activate	0
+$limit	menu/backup		0
+$limit	menu/prompt		0
+$limit	menu/cursor		0
+$limit	menu/change		0
+$limit	menu/invalid	0
+$limit	menu/dismiss	0
+$limit	menu/choose		0
+$limit	menu/clear		0
+
+$limit	intermission/tick		1
+$limit	intermission/nextstage	1

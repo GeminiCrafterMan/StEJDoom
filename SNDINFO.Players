@@ -1,0 +1,21 @@
+// =========================================================================================
+// StEJDOOM by Gemini0 & Mengo - SNDINFO - Player sounds
+// =========================================================================================
+// This applies to both characters.
+$random	pl_land { player/land01 player/land02 }
+
+player/land01 "Sounds/Players/Foot_01.wav"
+player/land02 "Sounds/Players/Foot_02.wav"
+
+$playersound	player		male	*death		"Sounds/Players/Death01.wav"
+$playersounddup	player		male	*xdeath		*death
+$playersound	player		male	*gibbed		dsslop
+$playersound	player		male	*pain100	"Sounds/Players/Ouch_Damage_High.wav"
+$playersounddup	player		male	*pain75		*pain100
+$playersounddup	player		male	*pain50		*pain100
+$playersounddup	player		male	*pain25		*pain100
+$playeralias	player		male	*grunt		pl_land
+$playersounddup	player		male	*land		*grunt
+$playersound	player		male	*jump		"Sounds/Players/Jump.wav"
+$playersound	player		male	*fist		dspunch
+$playersound	player		male	*usefail	"Sounds/Menus/Cute03.wav"

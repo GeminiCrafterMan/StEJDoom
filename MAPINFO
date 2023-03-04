@@ -1,0 +1,11 @@
+gameinfo
+{
+    PlayerClasses = "SparkPlayer", "FarkPlayer"
+	ENDOOM = "ENDSPARK"
+}
+
+map TITLEMAP "Title"
+{
+	sky1 = "TITLESKY"
+	music = "D_DM2TTL"
+}
