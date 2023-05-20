@@ -1,0 +1,105 @@
+class Bit : Inventory replaces HealthBonus
+{
+	override void BeginPlay()
+	{
+		super.BeginPlay();
+		A_SpriteOffset(oy: -16); // Offsets the Bit from the ground by 16 units to make it not do smart clipping (and give off the same effect as in Spark itself)
+	}
+	Default
+	{
+		+RANDOMIZE
+		+COUNTITEM
+		+INVENTORY.ALWAYSPICKUP
+		+NOGRAVITY
+		+INVENTORY.PERSISTENTPOWER
+		+INVENTORY.UNTOSSABLE
+		Inventory.ForbiddenTo "DoomPlayer", "ChexPlayer", "ClericPlayer", "ChickenPlayer", "FighterPlayer", "HereticPlayer", "MagePlayer", "PigPlayer", "StrifePlayer";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 100;
+		Inventory.PickupMessage "";
+		Inventory.PickupSound "items/bit";
+		Inventory.PickupFlash "BitFlash";
+	}
+	States
+	{
+		Spawn:
+			BITS ABCDEF 2 Bright;
+			Loop;
+	}
+}
+class BitArmorReplace : Bit replaces ArmorBonus {}
+class BitFlash : PickupFlash
+{
+	override void BeginPlay()
+	{
+		super.BeginPlay();
+		A_SpriteOffset(oy: -16);
+	}
+	States
+	{
+		Spawn:
+			BITS GHIJ 2 Bright;
+			Stop;
+	}
+}
+
+class MediumHealth : Stimpack replaces Stimpack
+{
+	override void BeginPlay()
+	{
+		super.BeginPlay();
+		A_SpriteOffset(oy: -16);
+	}
+	Default
+	{
+		+RANDOMIZE
+		Inventory.Amount 10; // 10%
+		Inventory.PickupMessage "";
+		Inventory.PickupSound "items/collect";
+		Inventory.PickupFlash "ItemFlash";
+		Health.LowMessage 10, "";
+	}
+	States
+	{
+		Spawn:
+			SPMH ABCDEFGHIJKLMNOPQ 2 Bright;
+			Loop;
+	}
+}
+class LargeHealth : Medikit replaces Medikit
+{
+	override void BeginPlay()
+	{
+		super.BeginPlay();
+		A_SpriteOffset(oy: -16);
+	}
+	Default
+	{
+		+RANDOMIZE
+		Inventory.Amount 20; // 20%
+		Inventory.PickupMessage "";
+		Inventory.PickupSound "items/collect";
+		Inventory.PickupFlash "ItemFlash";
+		Health.LowMessage 20, "";
+	}
+	States
+	{
+		Spawn:
+			SPLH ABCDEFGHIJKLMN 2 Bright;
+			Loop;
+	}
+}
+class ItemFlash : PickupFlash
+{
+	override void BeginPlay()
+	{
+		super.BeginPlay();
+		A_SpriteOffset(oy: -16);
+	}
+	States
+	{
+		Spawn:
+			SPKU ABCDEFGH 2 Bright;
+			Stop;
+	}
+}

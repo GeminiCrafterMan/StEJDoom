@@ -1,0 +1,28 @@
+class SparkJester : Weapon
+{
+	Default
+	{
+		Weapon.SelectionOrder 3700;
+		Inventory.PickupMessage "You shouldn't be seeing this.";
+		Obituary "%k was given a good jolt by %o's Electric Jester power.";
+		+INVENTORY.UNTOSSABLE;
+	}
+	States
+	{
+		Spawn:
+			SPRJ A 1;
+			Loop;
+		Select:
+			SPRJ BC 1 A_Raise;
+			Loop;
+		Deselect:
+			SPRJ DE 1 A_Lower;
+			Loop;
+		Ready:
+			SPRJ F 1 A_WeaponReady;
+			Loop;
+		Fire:
+			SPRJ A 1;
+			Goto Ready;
+	}
+}

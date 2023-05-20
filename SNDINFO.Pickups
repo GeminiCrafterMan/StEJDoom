@@ -1,0 +1,5 @@
+// =========================================================================================
+// StEJDOOM by Gemini0 & Mengo - SNDINFO - Pickups
+// =========================================================================================
+items/bit			"Sounds/Get_Spark_Collectable_06.wav"	// Collect Bit
+items/collect		"Sounds/CollectAdjusted.wav"			// Collect pickup

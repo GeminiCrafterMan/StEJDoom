@@ -1,0 +1,32 @@
+class FarkJester : Weapon
+{
+	Default
+	{
+		Weapon.SelectionOrder 3700;
+		Inventory.PickupMessage "You shouldn't be seeing this.";
+		Obituary "%k was given a good jolt by %o's Electric Jester power.";
+		+INVENTORY.UNTOSSABLE;
+	}
+	States
+	{
+		Spawn:
+			FRKJ A 1;
+			Loop;
+		Select:
+			FRKJ B 1 A_Raise;
+			Loop;
+		Deselect:
+			FRKJ CD 1 A_Lower;
+			Loop;
+		Ready:
+			FRKJ EEEEEEFFFFFFGGGGGGFFFFFF 1 A_WeaponReady(WRF_ALLOWRELOAD);
+			Loop;
+		Fire:
+			FRKJ A 1;
+			Goto Ready;
+		Reload:
+			FRKJ HIJ 2 Bright;
+			FRKJ KKKKKK 2;
+			Goto Ready;
+	}
+}

@@ -1,8 +1,12 @@
-version "2.4.0" // don't wanna alienate the "descargar para android" kiddos, so old-ass zscript it is
+version "4.1.0" // updated to 4.1.0, because i'm pretty sure all mobile ports of gzdoom are semi-up-to-date
+
 #include "ZScript/Players.zsc"
 //#include "ZScript/EventHandlers.zsc"
 
 //#include "ZScript/Weapons/Projectiles.zsc"
 // other weapons
+#include "ZScript/Weapons/SparkJester.zsc"
+#include "ZScript/Weapons/FarkJester.zsc"
 
+#include "ZScript/Pickups.zsc"
 //#include "ZScript/Generic Effects.zsc"
