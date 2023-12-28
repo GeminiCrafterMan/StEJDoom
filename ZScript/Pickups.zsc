@@ -15,7 +15,7 @@ class Bit : Inventory replaces HealthBonus
 		+INVENTORY.UNTOSSABLE
 		Inventory.ForbiddenTo "DoomPlayer", "ChexPlayer", "ClericPlayer", "ChickenPlayer", "FighterPlayer", "HereticPlayer", "MagePlayer", "PigPlayer", "StrifePlayer";
 		Inventory.Amount 1;
-		Inventory.MaxAmount 100;
+		Inventory.MaxAmount 300;
 		Inventory.PickupMessage "";
 		Inventory.PickupSound "items/bit";
 		Inventory.PickupFlash "BitFlash";
